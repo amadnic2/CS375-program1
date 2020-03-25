@@ -4,7 +4,7 @@ program1: program1.o
 	g++ -g -Wall -Werror program1.o -o program1
 
 program1.o: program1.cpp
-	g++ -c -g -Wall -Werror ${P1}.cpp -o ${P1}.o
+	g++ -c -g -Wall -Werror program1.cpp -o program1.o
 
 program2: program2.o
 	g++ -g -Wall -Werror program2.o -o program2

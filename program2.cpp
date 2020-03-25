@@ -9,7 +9,7 @@
 using namespace std;
 
 //Recursive LCS (No memoiozation)
-int LCS(string first, string second, int i, int j) {
+int LCS(string first, string second, int unsigned i, int unsigned j) {
 	//base case
 	if (i > first.length() + 1 || j > second.length()  + 1) {
 		return 0;

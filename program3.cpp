@@ -13,7 +13,7 @@ vector<vector<int>> memo;
 
 
 //Recursive Top-down LCS (with memoiazation)
-int LCS(string first, string second, int i, int j) {
+int LCS(string first, string second,unsigned int i, unsigned int j) {
 	//base case
 	if (i == 0 || j == 0) return 0;
 
@@ -51,9 +51,9 @@ int main(int argc, char *argv[]) {
 	file_2.close();
 
 	//initialize memoization table with -1s
-	for (int i = 0; i < str_1.length() + 1; i++) {
+	for (unsigned int i = 0; i < str_1.length() + 1; i++) {
 		vector<int> t;
-		for (int j = 0; j < str_2.length() + 1; j++) {
+		for (unsigned int j = 0; j < str_2.length() + 1; j++) {
 			t.push_back(-1);
 		}
 		memo.push_back(t);

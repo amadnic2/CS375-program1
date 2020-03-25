@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 	auto begin = chrono::high_resolution_clock::now();
 
 	// strings that we solve LCS for
-	string str_1, str_2
+	string str_1, str_2;
 
 	//open files
 	ifstream file_1(argv[1]);
@@ -36,8 +36,8 @@ int main(int argc, char *argv[]) {
 	op.open(argv[3]);
 
 //loop through matrices
-	for (int row = 0; row < str_1.length() + 1; row++) {
-		for (int column = 0; column < str_2.length() + 1; column++) {
+	for (unsigned int row = 0; row < str_1.length() + 1; row++) {
+		for (unsigned int column = 0; column < str_2.length() + 1; column++) {
 
 			//initialization of 0th rows and columns
 			if (row == 0 || column == 0) {
@@ -71,13 +71,13 @@ int main(int argc, char *argv[]) {
 	}
 
 	//starting positions in traversal of d_matrix
-  int x_len = str_1.length(), y_len = str_2.length();
+       int x_len = str_1.length(), y_len = str_2.length();
 
 	//print matrix if length <= 10
 	if (str_1.length() <= 10 && str_2.length() <= 10) {
 
-		for (int i = 0;  i <= str_1.length(); i++) {
-			for (int j = 0; j <= str_2.length(); j++) {
+		for (unsigned int i = 0;  i <= str_1.length(); i++) {
+			for (unsigned int j = 0; j <= str_2.length(); j++) {
 				op << V_mat[i][j] << " ";
 			}
 			op << endl;
